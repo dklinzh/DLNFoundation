@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		A02E8B7AE5294C19CC24874B /* libPods-DLNFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CD4E7492CF26A8044798E6 /* libPods-DLNFoundation.a */; };
+		C21041061D40C69B00A0931E /* DLNBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = C21041041D40C69B00A0931E /* DLNBundle.m */; };
+		C21041071D40C69B00A0931E /* DLNBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = C21041051D40C69B00A0931E /* DLNBundle.h */; };
 		C212E1FD1C309C6000592143 /* DLNLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C212E1FB1C309C6000592143 /* DLNLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C212E1FE1C309C6000592143 /* DLNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C212E1FC1C309C6000592143 /* DLNLog.m */; };
 		C219A9EF1C118A8C004FB906 /* DLNFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C219A9EE1C118A8C004FB906 /* DLNFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +78,8 @@
 /* Begin PBXFileReference section */
 		0E276BC458F2A3A4FC92735A /* Pods-DLNFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLNFoundation.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLNFoundation/Pods-DLNFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		A1CD4E7492CF26A8044798E6 /* libPods-DLNFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DLNFoundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21041041D40C69B00A0931E /* DLNBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNBundle.m; sourceTree = "<group>"; };
+		C21041051D40C69B00A0931E /* DLNBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNBundle.h; sourceTree = "<group>"; };
 		C212E1FB1C309C6000592143 /* DLNLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNLog.h; sourceTree = "<group>"; };
 		C212E1FC1C309C6000592143 /* DLNLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNLog.m; sourceTree = "<group>"; };
 		C219A9EB1C118A8C004FB906 /* DLNFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLNFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +284,8 @@
 		C229737E1C296D9C00F6E69B /* File */ = {
 			isa = PBXGroup;
 			children = (
+				C21041051D40C69B00A0931E /* DLNBundle.h */,
+				C21041041D40C69B00A0931E /* DLNBundle.m */,
 				C22973831C29709600F6E69B /* DLNFileManager.h */,
 				C22973841C29709600F6E69B /* DLNFileManager.m */,
 			);
@@ -324,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C229737D1C2950AF00F6E69B /* DLNMacro.h in Headers */,
+				C21041071D40C69B00A0931E /* DLNBundle.h in Headers */,
 				C22973691C29219500F6E69B /* NSString+DLNReverse.h in Headers */,
 				C229739C1C2A707900F6E69B /* DLNApplicationContext.h in Headers */,
 				C22973921C2A4FE300F6E69B /* DLNDeviceInfo.h in Headers */,
@@ -522,6 +529,7 @@
 				C22973971C2A521B00F6E69B /* DLNSysSettings.m in Sources */,
 				C2A7EC661C464ADD00913411 /* NSObject+DLNIntrospection.m in Sources */,
 				C212E1FE1C309C6000592143 /* DLNLog.m in Sources */,
+				C21041061D40C69B00A0931E /* DLNBundle.m in Sources */,
 				C229733F1C28FF7600F6E69B /* NSDictionary+DLNJson.m in Sources */,
 				C22973821C296E9400F6E69B /* NSString+DLNJson.m in Sources */,
 				C2CCD4A41CBC9F1900614003 /* NSString+DLNPinYin.m in Sources */,
