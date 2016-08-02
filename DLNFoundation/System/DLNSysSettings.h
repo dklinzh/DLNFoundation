@@ -10,6 +10,7 @@
 
 NS_CLASS_AVAILABLE_IOS(8_0) @interface DLNSysSettings : NSObject
 
++ (void)openAbout NS_AVAILABLE_IOS(8_0);
 + (void)openAppSelfSettings NS_AVAILABLE_IOS(8_0);
 + (void)openWiFi NS_AVAILABLE_IOS(8_0);
 + (void)openNotification NS_AVAILABLE_IOS(8_0);

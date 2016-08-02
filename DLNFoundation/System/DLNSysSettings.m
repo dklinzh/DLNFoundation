@@ -47,6 +47,10 @@
 
 @implementation DLNSysSettings
 #pragma mark - Public
++ (void)openAbout {
+    [self openURL:@"prefs:root=General&path=About"];
+}
+
 + (void)openWiFi {
     [self openURL:@"prefs:root=WIFI"];
 }
