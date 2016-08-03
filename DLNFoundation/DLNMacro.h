@@ -34,6 +34,12 @@
 #define stringEmpty(string) !string||[string isEqualToString:@""]
 #endif
 
+#pragma mark - 数据安全
+#define NotNull(obj) ([(obj) isEqual:[NSNull null]] ? nil : (obj))
+#define NotNullSrt(str) NotNull(str)?str:(@"")
+#define toString(obj) [NSString stringWithFormat:@"%@",NotNull(obj)]
+#define toNullStr(obj) ([toString(obj) isEqualToString:@"(null)"] ? @"" : toString(obj))
+
 //  图片：
 #ifndef imagePath
 #define imagePath(imageName) [[NSBundle mainBundle] pathForResource:imageName ofType:@"png"]
