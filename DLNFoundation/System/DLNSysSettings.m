@@ -47,6 +47,10 @@
 
 @implementation DLNSysSettings
 #pragma mark - Public
++ (void)phoneCall:(NSString *)phoneNumber {
+    [self openURL:[NSString stringWithFormat:@"telprompt://%@", phoneNumber]];
+}
+
 + (void)openAbout {
     [self openURL:@"prefs:root=General&path=About"];
 }
