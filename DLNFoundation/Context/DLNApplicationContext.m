@@ -7,7 +7,6 @@
 //
 
 #import "DLNApplicationContext.h"
-#import <DLNCore/DLNUUIDTool.h>
 
 @interface DLNApplicationContext ()
 @property (strong, nonatomic) NSHashTable *alertViewHashTable;
