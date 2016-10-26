@@ -17,7 +17,7 @@ FOUNDATION_EXPORT const unsigned char DLNFoundationVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DLNFoundation/PublicHeader.h>
 #import "DLNMacro.h"
-#import "CocoaLumberjack.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 #ifndef DLNTargetSelfLogLevel
 #ifdef DEBUG

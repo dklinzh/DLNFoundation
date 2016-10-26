@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		210B2B8E185118BB06CA8BFC /* Pods_DLNFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8799ECDD4B9C2C72CD1D3CEB /* Pods_DLNFoundation.framework */; };
+		26345B048B755127CE21915B /* Pods_DLNFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B56FE3DDC4AADD66040DA5E /* Pods_DLNFoundation.framework */; };
 		C21041061D40C69B00A0931E /* DLNBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = C21041041D40C69B00A0931E /* DLNBundle.m */; };
 		C21041071D40C69B00A0931E /* DLNBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = C21041051D40C69B00A0931E /* DLNBundle.h */; };
 		C212E1FD1C309C6000592143 /* DLNLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C212E1FB1C309C6000592143 /* DLNLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,7 +77,7 @@
 
 /* Begin PBXFileReference section */
 		0E276BC458F2A3A4FC92735A /* Pods-DLNFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLNFoundation.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLNFoundation/Pods-DLNFoundation.release.xcconfig"; sourceTree = "<group>"; };
-		8799ECDD4B9C2C72CD1D3CEB /* Pods_DLNFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLNFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B56FE3DDC4AADD66040DA5E /* Pods_DLNFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLNFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21041041D40C69B00A0931E /* DLNBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNBundle.m; sourceTree = "<group>"; };
 		C21041051D40C69B00A0931E /* DLNBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNBundle.h; sourceTree = "<group>"; };
 		C212E1FB1C309C6000592143 /* DLNLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNLog.h; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210B2B8E185118BB06CA8BFC /* Pods_DLNFoundation.framework in Frameworks */,
+				26345B048B755127CE21915B /* Pods_DLNFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +160,7 @@
 		814EB1CD47E2F4B6C41A5213 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8799ECDD4B9C2C72CD1D3CEB /* Pods_DLNFoundation.framework */,
+				7B56FE3DDC4AADD66040DA5E /* Pods_DLNFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -306,8 +306,8 @@
 		C22973981C2A6F3500F6E69B /* Context */ = {
 			isa = PBXGroup;
 			children = (
-				C22973991C2A707900F6E69B /* DLNApplicationContext.m */,
 				C229739A1C2A707900F6E69B /* DLNApplicationContext.h */,
+				C22973991C2A707900F6E69B /* DLNApplicationContext.m */,
 				C284CCE71C30F41C006E0681 /* DLNDataPass.h */,
 				C284CCE81C30F41C006E0681 /* DLNDataPass.m */,
 			);
@@ -480,7 +480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C229732A1C28F07900F6E69B /* Bump Build Version */ = {

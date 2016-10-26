@@ -7,13 +7,13 @@
 //
 
 #import "DLNDeviceInfo.h"
-#import "DLNUUIDTool.h"
+#import <DLNCore/DLNUUIDTool.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVCaptureDevice.h>
 #import <AVFoundation/AVMediaFormat.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import "AESCrypt.h"
+#import <DLNCore/AESCrypt.h>
 
 static NSString *const KeyDeviceToken = @"KeyDeviceToken";
 static NSString *const SecretKey = @"device@iOS";
