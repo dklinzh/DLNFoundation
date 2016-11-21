@@ -16,5 +16,5 @@
  *
  *  @return If the bundle with specified name can not be found, it will return the bundle with self class is associated.
  */
-+ (NSBundle *)bundleWithName:(NSString *)name;
++ (NSBundle *)bundleForClass:(Class)class withName:(NSString *)name;
 @end

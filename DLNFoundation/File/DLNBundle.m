@@ -10,8 +10,8 @@
 
 @implementation DLNBundle
 
-+ (NSBundle *)bundleWithName:(NSString *)name {
-    NSBundle *bundle = [NSBundle bundleForClass:self.class];
++ (NSBundle *)bundleForClass:(Class)class withName:(NSString *)name {
+    NSBundle *bundle = [NSBundle bundleForClass:class];
     if (!name) {
         return bundle;
     }
