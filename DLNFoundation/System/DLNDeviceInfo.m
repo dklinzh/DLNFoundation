@@ -14,6 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <DLNCore/AESCrypt.h>
+#import <UserNotifications/UserNotifications.h>
 
 static NSString *const KeyDeviceToken = @"KeyDeviceToken";
 static NSString *const SecretKey = @"device@iOS";
@@ -25,7 +26,18 @@ static NSString *const SecretKey = @"device@iOS";
 }
 
 + (BOOL)isUserNotificationEnabled {
-    if (IOS_VERSION >= 8.0) {
+    if (IOS_VERSION >= 10.0) {
+        __block BOOL result;
+        NSLock *lock = [[NSLock alloc] init];
+        [lock lock];
+        [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            result = settings.authorizationStatus == UNAuthorizationStatusAuthorized;
+            [lock unlock];
+        }];
+        [lock lock];
+        [lock unlock];
+        return result;
+    } else if (IOS_VERSION >= 8.0) {
         return [[UIApplication sharedApplication] currentUserNotificationSettings].types != UIUserNotificationTypeNone;
     } else {
         return [[UIApplication sharedApplication] enabledRemoteNotificationTypes] != UIRemoteNotificationTypeNone;
