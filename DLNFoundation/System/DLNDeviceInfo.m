@@ -37,11 +37,19 @@ static NSString *const SecretKey = @"device@iOS";
         [lock lock];
         [lock unlock];
         return result;
-    } else if (IOS_VERSION >= 8.0) {
+    }
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_10_0
+    else if (IOS_VERSION >= 8.0) {
         return [[UIApplication sharedApplication] currentUserNotificationSettings].types != UIUserNotificationTypeNone;
-    } else {
+    }
+#endif
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
+    else {
         return [[UIApplication sharedApplication] enabledRemoteNotificationTypes] != UIRemoteNotificationTypeNone;
     }
+#endif
+    
+    return NO;
 }
 
 + (BOOL)isPhotoDataAccessed {
