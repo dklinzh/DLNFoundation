@@ -547,7 +547,7 @@ static const char* PYCharIndex[94] =
     }
     @catch(...)
     {
-        DDLogWarn(@"Convert %@ to Pinyin failed!", self);
+        NSLog(@"Convert %@ to Pinyin failed!", self);
         py = nil;
     }
     @finally
@@ -570,7 +570,7 @@ static const char* PYCharIndex[94] =
     }
     @catch(...)
     {
-        DDLogWarn(@"Convert %@ to pinyinFullString failed!", self);
+        NSLog(@"Convert %@ to pinyinFullString failed!", self);
     }
     
     return nil;
@@ -639,7 +639,7 @@ static const char* PYCharIndex[94] =
     }
     @catch(...)
     {
-        DDLogWarn(@"Convert %@ to Pinyin failed!", self);        py = nil;
+        NSLog(@"Convert %@ to Pinyin failed!", self);        py = nil;
     }
     @finally
     {

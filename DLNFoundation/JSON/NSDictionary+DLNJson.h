@@ -6,8 +6,9 @@
 //  Copyright © 2015 Daniel Lin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface NSDictionary (DLNJson)
-- (id)dln_JsonModelOfClass:(Class)cls;
-@end
+// FIXME:
+//#import <Foundation/Foundation.h>
+//
+//@interface NSDictionary (DLNJson)
+//- (id)dln_JsonModelOfClass:(Class)cls;
+//@end

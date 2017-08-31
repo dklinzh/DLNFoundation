@@ -74,7 +74,7 @@ static NSString *const SecretKey = @"device@iOS";
                         stringByReplacingOccurrencesOfString: @">" withString: @""]
                        stringByReplacingOccurrencesOfString: @" " withString: @""];
 
-    DDLogInfo(@"deviceToken: %@", token);
+    NSLog(@"deviceToken: %@", token);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[AESCrypt encrypt:token password:SecretKey] forKey:KeyDeviceToken];
     [defaults synchronize];

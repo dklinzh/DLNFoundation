@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "DLNFoundation"
-  s.version      = "0.5.1"
+  s.version      = "0.5.2"
   s.summary      = "A common foundation framwork for iOS development. All 'DLN' frameworks should depend on it."
   s.description  = <<-DESC
                    A common foundation framwork for iOS development. All 'DLN' frameworks should depend on it.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES" }
   s.dependency "DLNCore"
-  s.dependency "CocoaLumberjack", "~> 3.0"
-  s.dependency "JSONModel", "~> 1.7"
+  # s.dependency "CocoaLumberjack", "~> 3.0"
+  # s.dependency "JSONModel", "~> 1.7"
   s.prefix_header_file = 'DLNFoundation/DLNFoundation-Prefix.pch'
 end
