@@ -26,7 +26,7 @@ static NSString *const SecretKey = @"device@iOS";
 }
 
 + (BOOL)isUserNotificationEnabled {
-    if (IOS_VERSION >= 10.0) {
+    if (@available(iOS 10, *)) {
         __block BOOL result;
         NSLock *lock = [[NSLock alloc] init];
         [lock lock];
@@ -39,7 +39,7 @@ static NSString *const SecretKey = @"device@iOS";
         return result;
     }
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_10_0
-    else if (IOS_VERSION >= 8.0) {
+    else if (@available(iOS 8, *)) {
         return [[UIApplication sharedApplication] currentUserNotificationSettings].types != UIUserNotificationTypeNone;
     }
 #endif
