@@ -38,7 +38,7 @@
 
 + (NSString*)nsdateToString:(NSDate *)date withDateFormat:(NSString *)format {
     NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
-    //    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormat setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"en_US_POSIX"]];
     [dateFormat setDateFormat:format];
     NSString *string=[dateFormat stringFromDate:date];
     return string;
@@ -46,7 +46,7 @@
 
 + (long long)stringToTimeSp:(NSString *)timeStr fromDateFormat:(NSString *)format {
     NSDateFormatter *dateFormat=[[NSDateFormatter alloc] init];
-    //    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormat setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"en_US_POSIX"]];
     [dateFormat setDateFormat:format];
     NSDate *fromdate=[dateFormat dateFromString:timeStr];
     NSTimeInterval interval = [fromdate timeIntervalSince1970]*1000;
@@ -55,6 +55,7 @@
 
 + (NSString *)timeSpToString:(long long)timeSp withDateFormat:(NSString *)format {
     NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
+    [dateFormat setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"en_US_POSIX"]];
     [dateFormat setDateFormat:format];
     NSDate *date = [self timeSpToNSDate:timeSp];
     NSString *string = [dateFormat stringFromDate:date];
@@ -64,7 +65,7 @@
 + (NSString *)getCurrentTimewithFormat:(NSString *)format {
     //    NSDate *localDate=[self getLocalDate:[NSDate date]];
     NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
-    //    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormat setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"en_US_POSIX"]];
     [dateFormat setDateFormat:format];
     NSString *string=[dateFormat stringFromDate:[NSDate date]];
     return string;
