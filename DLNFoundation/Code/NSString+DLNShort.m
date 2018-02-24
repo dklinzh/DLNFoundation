@@ -10,22 +10,22 @@
 #import "NSString+DLNReverse.h"
 
 static NSString *const ALPHABET = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-static const int BASE_COUNT = 62;
+static const uint BASE_COUNT = 62;
 
 @implementation NSString (DLNShort)
 
 - (NSString *)dln_short {
-    return [self encode:[self decode:self]];
+    return [self dln_encode:[self dln_decode:self]];
 }
 
-- (int)decode:(NSString *)string {
-    int num = 0;
+- (uint)dln_decode:(NSString *)string {
+    uint num = 0;
     if (string) {
-        int len = (int)[string length];
-        for (int i=0; i<len; i++) {
+        uint len = (uint)[string length];
+        for (uint i=0; i<len; i++) {
             NSRange range = [ALPHABET rangeOfString:[string substringWithRange:NSMakeRange(i, 1)]];
             if (range.location != NSNotFound) {
-                int index = (int)range.location;
+                uint index = (uint)range.location;
                 num = num * BASE_COUNT + index;
             }
         }
@@ -34,7 +34,7 @@ static const int BASE_COUNT = 62;
     return num;
 }
 
-- (NSString *)encode:(int)num {
+- (NSString *)dln_encode:(uint)num {
     NSMutableString *string = [[NSMutableString alloc] init];
     while ((num & 0x0FFFF) > 0) {
         [string appendString:[ALPHABET substringWithRange:NSMakeRange((num & 0x0FFFF) % BASE_COUNT, 1)]];
@@ -44,3 +44,4 @@ static const int BASE_COUNT = 62;
     return [string dln_reverse];
 }
 @end
+
