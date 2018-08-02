@@ -51,17 +51,17 @@
     [self openURL:[NSString stringWithFormat:@"telprompt://%@", phoneNumber]];
 }
 
-+ (void)openAbout {
-    [self openURL:@"prefs:root=General&path=About"];
-}
-
-+ (void)openWiFi {
-    [self openURL:@"prefs:root=WIFI"];
-}
-
-+ (void)openNotification {
-    [self openURL:@"prefs:root=NOTIFICATIONS_ID"];
-}
+//+ (void)openAbout {
+//    [self openURL:@"prefs:root=General&path=About"];
+//}
+//
+//+ (void)openWiFi {
+//    [self openURL:@"prefs:root=WIFI"];
+//}
+//
+//+ (void)openNotification {
+//    [self openURL:@"prefs:root=NOTIFICATIONS_ID"];
+//}
 
 + (void)openAppSelfSettings {
     [self openURL:UIApplicationOpenSettingsURLString];
