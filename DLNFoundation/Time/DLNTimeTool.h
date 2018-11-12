@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DLNTimeTool : NSObject
 /**
  *  获取当前系统的时间戳(ms)
@@ -31,25 +33,25 @@
  *  将NSDate按指定格式时间输出
  *
  */
-+(NSString *)nsdateToString:(NSDate *)date withDateFormat:(NSString *)format;
++(NSString *)nsdateToString:(NSDate *)date withDateFormat:(NSString *)format __attribute__((deprecated));
 
 /**
  *  将时间戳转换成指定格式时间
  *
  */
-+ (NSString *)timeSpToString:(long long)timeSp withDateFormat:(NSString *)format;
++ (NSString *)timeSpToString:(long long)timeSp withDateFormat:(NSString *)format __attribute__((deprecated));
 
 /**
  *  将指定格式时间转换成时间戳
  *
  */
-+(long long)stringToTimeSp:(NSString *)timeStr fromDateFormat:(NSString *)format;
++(long long)stringToTimeSp:(NSString *)timeStr fromDateFormat:(NSString *)format __attribute__((deprecated));
 
 /**
  *  获取指定格式的当前系统时间
  *
  */
-+(NSString *)getCurrentTimewithFormat:(NSString *)format;
++(NSString *)getCurrentTimewithFormat:(NSString *)format __attribute__((deprecated));
 
 /**
  *  比较给定NSDate与当前时间的时间差，返回相差的秒数
@@ -57,3 +59,5 @@
  */
 +(long)timeDifference:(NSDate *)date;
 @end
+
+NS_ASSUME_NONNULL_END
