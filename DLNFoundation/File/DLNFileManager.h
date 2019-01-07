@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DLNFileManager : NSObject
 /**
  *  获取Documents目录
@@ -84,11 +86,21 @@
 - (BOOL)deleteFileInDocByName:(NSString *)fileName;
 
 /**
- *  文件属性
+ *  文件属性, Use `NSString.fileSystemRepresentation` instead.
+ *  #import <sys/stat.h>
+ *
+ *  struct stat statbuf;
+ *  const char *cpath = [filePath fileSystemRepresentation];
+ *  if (cpath && stat(cpath, &statbuf) == 0) {
+ *     NSNumber *fileSize = [NSNumber numberWithUnsignedLongLong:statbuf.st_size];
+ *     ...
+ *  }
  *
  *  @param fileName <#fileName description#>
  *
  *  @return <#return value description#>
  */
-- (NSDictionary *)getFileAttriutesInDocByName:(NSString *)fileName;
+- (NSDictionary *)getFileAttriutesInDocByName:(NSString *)fileName __attribute__((deprecated));
 @end
+
+NS_ASSUME_NONNULL_END

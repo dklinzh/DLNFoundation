@@ -365,7 +365,6 @@
 				C219A9E81C118A8C004FB906 /* Headers */,
 				C219A9E91C118A8C004FB906 /* Resources */,
 				C229732A1C28F07900F6E69B /* Bump Build Version */,
-				425C65C504899195313F03E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -453,21 +452,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		425C65C504899195313F03E1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLNFoundation/Pods-DLNFoundation-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		66CE2DBB49B96489CE3338B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
