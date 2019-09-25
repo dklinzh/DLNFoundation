@@ -70,9 +70,14 @@ static NSString *const SecretKey = @"device@iOS";
     if (!deviceToken) {
         return NO;
     }
-    NSString *token = [[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
-                        stringByReplacingOccurrencesOfString: @">" withString: @""]
-                       stringByReplacingOccurrencesOfString: @" " withString: @""];
+
+    NSMutableString *_deviceToken = [NSMutableString string];
+    const char *bytes = deviceToken.bytes;
+    NSUInteger count = deviceToken.length;
+    for (int i = 0; i < count; i++) {
+        [_deviceToken appendFormat:@"%02.2x", bytes[i]&0x000000FF];
+    }
+    NSString *token = [_deviceToken copy];
 
     NSLog(@"deviceToken: %@", token);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
