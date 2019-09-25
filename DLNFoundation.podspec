@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "DLNFoundation"
-  s.version      = "0.5.2"
+  s.version      = "0.5.3"
   s.summary      = "A common foundation framwork for iOS development. All 'DLN' frameworks should depend on it."
   s.description  = <<-DESC
                    A common foundation framwork for iOS development. All 'DLN' frameworks should depend on it.
